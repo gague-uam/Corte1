@@ -10,7 +10,8 @@ namespace Corte1.models
     {
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
-        public string FechaNac { get; set; }
+        public DateTime FechaNac { get; set; }
         public string Ciudad { get; set; }
+
     }
 }

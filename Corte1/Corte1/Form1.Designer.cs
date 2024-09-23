@@ -33,12 +33,12 @@
             this.tbNames = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
-            this.dtbFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEvalueAge = new System.Windows.Forms.Button();
-            this.lblmostrar = new System.Windows.Forms.Label();
+            this.lbDatos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblNames
@@ -82,12 +82,12 @@
             this.lblFechaNac.TabIndex = 4;
             this.lblFechaNac.Text = "Fecha de Nacimiento:";
             // 
-            // dtbFechaNac
+            // dtpFechaNac
             // 
-            this.dtbFechaNac.Location = new System.Drawing.Point(146, 88);
-            this.dtbFechaNac.Name = "dtbFechaNac";
-            this.dtbFechaNac.Size = new System.Drawing.Size(193, 20);
-            this.dtbFechaNac.TabIndex = 5;
+            this.dtpFechaNac.Location = new System.Drawing.Point(146, 88);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(193, 20);
+            this.dtpFechaNac.TabIndex = 5;
             // 
             // cbCiudad
             // 
@@ -114,6 +114,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Agregar Datos";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEvalueAge
             // 
@@ -123,27 +124,27 @@
             this.btnEvalueAge.TabIndex = 9;
             this.btnEvalueAge.Text = "Evaluar edad";
             this.btnEvalueAge.UseVisualStyleBackColor = true;
+            this.btnEvalueAge.Click += new System.EventHandler(this.btnEvalueAge_Click);
             // 
-            // lblmostrar
+            // lbDatos
             // 
-            this.lblmostrar.AutoSize = true;
-            this.lblmostrar.Location = new System.Drawing.Point(219, 261);
-            this.lblmostrar.Name = "lblmostrar";
-            this.lblmostrar.Size = new System.Drawing.Size(52, 13);
-            this.lblmostrar.TabIndex = 10;
-            this.lblmostrar.Text = "Usted es:";
+            this.lbDatos.FormattingEnabled = true;
+            this.lbDatos.Location = new System.Drawing.Point(23, 239);
+            this.lbDatos.Name = "lbDatos";
+            this.lbDatos.Size = new System.Drawing.Size(340, 121);
+            this.lbDatos.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 375);
-            this.Controls.Add(this.lblmostrar);
+            this.ClientSize = new System.Drawing.Size(389, 375);
+            this.Controls.Add(this.lbDatos);
             this.Controls.Add(this.btnEvalueAge);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblCiudad);
             this.Controls.Add(this.cbCiudad);
-            this.Controls.Add(this.dtbFechaNac);
+            this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.lblFechaNac);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbNames);
@@ -163,12 +164,12 @@
         private System.Windows.Forms.TextBox tbNames;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.Label lblFechaNac;
-        private System.Windows.Forms.DateTimePicker dtbFechaNac;
+        private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.ComboBox cbCiudad;
         private System.Windows.Forms.Label lblCiudad;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEvalueAge;
-        private System.Windows.Forms.Label lblmostrar;
+        private System.Windows.Forms.ListBox lbDatos;
     }
 }
 

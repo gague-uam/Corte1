@@ -3,38 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Corte1.models
 {
     internal class Registro
     {
-        private Persona[] personas;
-        private int i;
+        private Persona[] personas = new Persona[30];
 
-        public Registro()
+        private int i = 0;
+        private ListBox lbDatos;
+
+        public Registro(ListBox listBox)
         {
-            personas = new Persona[10];
-            i = 0;
+            lbDatos = listBox;
         }
-        
+
         public void AgregarPersona(Persona persona)
         {
             if (i < 30)
             {
                 personas[i] = persona;
                 i++;
+                lbDatos.Items.Add($"{persona.Nombres} {persona.Apellidos} {persona.FechaNac} {persona.Ciudad}" );
             }
             else
             {
-                Console.WriteLine("El registro de personas ya esta lleno, no se podran agregar mas valores.");
+                 MessageBox.Show("El registro de personas ya esta lleno, no se podran agregar mas valores.");
             }
         }
-        public void MostrarPersonas()
+        public Persona[] MostrarPersonas()
         {
-            for (int j = 0; j < i; j++)
-            {
-                Console.WriteLine($"Nombre: {personas[i].Nombres} {personas[i].Apellidos}, Fecha de Nacimiento: {personas[i].FechaNac.ToShortDateString()}, Ciudad: {personas[i].Ciudad}");
-            }
+            return personas.Where(p => p != null).ToArray();
         }
+
     }
 }
